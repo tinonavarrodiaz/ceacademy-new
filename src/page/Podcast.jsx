@@ -6,7 +6,7 @@ const Podcast = () => {
     classActive('media');
   }, []);
   return (
-    <section className="section Podcast">
+    <section className="section container Podcast">
       <h1>Nuestros Podcast</h1>
     </section>
   );

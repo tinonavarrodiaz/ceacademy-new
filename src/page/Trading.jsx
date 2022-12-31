@@ -6,7 +6,7 @@ const Trading = () => {
     classActive(null);
   }, []);
   return (
-    <section className="section Trading">
+    <section className="section container Trading">
       <h1>Trading</h1>
     </section>
   );

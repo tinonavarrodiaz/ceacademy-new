@@ -6,7 +6,7 @@ const Contacto = () => {
     classActive(null);
   }, []);
   return (
-    <section className="section Contacto">
+    <section className="section container Contacto">
       <h1>Contacto</h1>
     </section>
   );

@@ -6,7 +6,7 @@ const Nosotros = () => {
     classActive(null);
   }, []);
   return (
-    <section className="section Nosotros">
+    <section className="section container Nosotros">
       <h1>Nosotros</h1>
     </section>
   );

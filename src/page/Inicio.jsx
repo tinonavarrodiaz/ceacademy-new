@@ -6,7 +6,7 @@ const Inicio = () => {
     classActive(null);
   }, []);
   return (
-    <section className="section Inicio">
+    <section className="section container Inicio">
       <h1>Inicio</h1>
     </section>
   );

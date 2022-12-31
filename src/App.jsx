@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Contacto from './page/Contacto';
-import Ebooks from './page/ebooks';
+import Ebooks from './page/Ebooks';
 import Inicio from './page/Inicio';
 import Management from './page/Management';
 import Nosotros from './page/Nosotros';

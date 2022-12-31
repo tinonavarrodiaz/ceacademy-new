@@ -6,7 +6,7 @@ const Management = () => {
     classActive(null);
   }, []);
   return (
-    <section className="section Management">
+    <section className="section container Management">
       <h1>Management</h1>
     </section>
   );

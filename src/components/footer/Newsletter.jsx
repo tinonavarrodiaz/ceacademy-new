@@ -1,8 +1,11 @@
 const Newsletter = ()=>{
+  const submit = (e)=>{
+    e.preventDefault()
+  }
   return(
     <div className="Newsletter">
       <h3>Suscríbete a nuestro newsletter</h3>
-      <form action="#"className={'Newsletter__form'}>
+      <form action="#"className={'Newsletter__form'} onSubmit={submit}>
         <input
           type="email"
           name="email"
