@@ -1,0 +1,36 @@
+@import "menuMixis";
+
+.Header__menu{
+  @include to(lg){
+    @include menuMobil();
+  }
+  @media only screen and (min-width : 1224px) and (-webkit-device-pixel-ratio: 1){
+    @include menuDesktop();
+  }
+  @media only screen and (min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+    @include menuMobil();
+  }
+}
+// .icon-chevron{
+//   display: inline-block;
+//   margin-right: .5em;
+// }
+// .Header__menu{
+//   @include to(lg){
+//     position: absolute;
+//     top: var(--header-height);
+//     left: 0;
+//     width: 100%;
+//     background-color: lightgrey;
+//   }
+//   @include from(lg){
+//     position: relative;
+//   }
+//   @media only screen and (min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+//     position: absolute;
+//     top: var(--header-height);
+//     left: 0;
+//     width: 100%;
+//     background-color: lightgrey;
+//   }
+// }

@@ -1,0 +1,144 @@
+.Header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height);
+  background-color: #fff;
+  position: relative;
+  text-transform: uppercase;
+  @include from(lg){
+    // background-color: lime;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 5%;
+  }
+  a{
+    display: block;
+  }
+  &__logo{
+    width: 60%;
+    max-width: 300px;
+    @include portraitFrom(lg){
+      max-width: 400px;
+    }
+    @include from(lg){
+      width: auto;
+    }
+    img{
+      width: 100%;
+      height: auto;
+      @include from(lg) {
+        width: auto;
+        height: calc(var(--header-height) * .5);
+
+      }
+    }
+  }
+  Nav{
+    border: 3px solid red;
+     @include from(lg) {
+      display: flex;
+      width: 100%;
+     }
+  }
+  &__menu{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    overflow-x: hidden;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color: var(--color-main);
+    color: var(--body-bg);
+    height: auto;
+    max-height: 0;
+    transition: max-height .5s;
+    &.is-active{
+      max-height: 27em;
+
+    }
+    @include from(lg){
+      position: relative;
+      flex-direction: row;
+      justify-content: flex-end;
+      top: unset;
+      left: unset;
+      margin-left: auto;
+      background-color: transparent;
+      color: inherit;
+
+
+      // width: 100%;
+      .submenu{
+        display: none;
+
+      }
+    }
+    &__item {
+      width: 100%;
+      display: block;
+      padding-left: 1em;
+      border-bottom: 1px solid rgba(#fff,.2);
+      &:last-child {
+          border-bottom: none;
+        }
+        @include from(lg){
+          border: none;
+          padding: 0;
+          width: auto;
+        }
+        @include from(lg){
+          padding: 0 1%;
+        }
+    }
+    &__link{
+      line-height: 3em;
+      @include from(lg) {
+        display: inline-block;
+        line-height: 4em;
+        background-color: darkmagenta;
+        padding: 0;
+      }
+    }
+  }
+  .submenu{
+    background-color: rgba(#fff,.1);
+    overflow: hidden;
+    border-radius: .3rem;
+    padding-left: 1em;
+      padding-right: 1em;
+    &__item{
+      padding-left: 1em;
+      padding-right: 1em;
+      border-bottom: 1px solid rgba(#fff, .2);
+      &:last-child{
+        border-bottom: none;
+      }
+    }
+    &__link{
+      line-height: 3em;
+    }
+  }
+}
+.li-children{
+  i{
+    display: inline-block;
+    margin-left: .5em;
+    transition: transform .3s;
+    &.is-active{
+      transform: rotate(180deg);
+    }
+  }
+  .submenu{
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .3s;
+    &.is-active{
+      max-height: 7em;
+      margin-bottom: 1em;
+    }
+  }
+}
